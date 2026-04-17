@@ -1,0 +1,24 @@
+.git
+.brain
+.idea
+.vscode
+__pycache__
+*.pyc
+*.zip
+*.bak
+*.tmp
+node_modules/
+credentials/
+sync_config.json
+LD REPORT V3 2026 demo_golive/
+local_excel_app.py
+Chay_Bao_Cao_Local.cmd
+Dong_Bo_Google_Sheets.cmd
+tests/
+plans/
+docs/
+image/
+media/
+reports/
+scripts/
+*.md

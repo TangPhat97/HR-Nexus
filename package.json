@@ -1,0 +1,14 @@
+{
+  "name": "file-excel-tu-dong",
+  "version": "1.0.0",
+  "description": "Gonsa HR-NEXUS – Google Apps Script automation",
+  "scripts": {
+    "test": "node tests/raw-sync-regression.test.cjs",
+    "test:watch": "node --watch tests/raw-sync-regression.test.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

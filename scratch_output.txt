@@ -1,0 +1,29 @@
+--- 1. KIEM TRA TRUNG MA NHAN VIEN ---
+Ma NV: 50007030 | Ten: Trần Thị Bảo Trâm | Email: 0
+Ma NV: 50007030 | Ten: Trần Thị Bảo Trâm | Email: baotramwb11@gmail.com
+Ma NV: 50007488 | Ten: Lê Thành Chương | Email: chuong.le@gonsa.com.vn
+Ma NV: 50007488 | Ten: Lê Thành Chương | Email: cuong.dang@gonsa.com.vn
+Ma NV: 50007550 | Ten: Võ Trúc Phương | Email: phuong.vo@gonsa.com.vn
+Ma NV: 50007550 | Ten: Võ Trúc Phương | Email: vophuong1935@gmail.com
+
+--- 2. KIEM TRA TRUNG EMAIL ---
+Email: 0 | Ma NV: 50007469 | Ten: Nguyễn Như Quỳnh
+Email: 0 | Ma NV: 50007470 | Ten: Bùi Nguyễn Thanh Trúc
+Email: 0 | Ma NV: 50007473 | Ten: Dương Ngọc Phương Như
+Email: 0 | Ma NV: 50007478 | Ten: Lâm Hoàng Hà
+Email: 0 | Ma NV: 50007541 | Ten: Lê Thanh Nhã
+Email: 0 | Ma NV: 50007030 | Ten: Trần Thị Bảo Trâm
+Email: 0 | Ma NV: 50007078 | Ten: Ngô Hồng Phối
+Email: 0 | Ma NV: 50007348 | Ten: Nguyễn Lê Minh
+Email: 0 | Ma NV: 50007374 | Ten: Huỳnh Lê Anh Kim
+Email: 0 | Ma NV: 50007402 | Ten: Đỗ Ngọc Trân Châu
+Email: 0 | Ma NV: 50007466 | Ten: Đào Thanh Trúc
+Email: 0 | Ma NV: 50007347 | Ten: Nguyễn Thanh Tú
+Email: chuong.le@gonsa.com.vn | Ma NV: 50007488 | Ten: Lê Thành Chương
+Email: chuong.le@gonsa.com.vn | Ma NV: 260311-03361 | Ten: Lâm Phương Thảo
+Email: hai.doan@gonsa.vn | Ma NV: 50007491 | Ten: Đoàn Ngọc Hải
+Email: hai.doan@gonsa.vn | Ma NV: 260315-03346 | Ten: Đoàn Ngọc Hải
+
+--- 3. CAC DONG CO CHUONG.LE ---
+Email: chuong.le@gonsa.com.vn | Ma NV: 50007488 | Ten: Lê Thành Chương
+Email: chuong.le@gonsa.com.vn | Ma NV: 260311-03361 | Ten: Lâm Phương Thảo

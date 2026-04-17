@@ -1,0 +1,36 @@
+# Brain files (local state)
+.brain/session.json
+.brain/brain.json
+
+# Clasp deployment config (contains scriptId)
+.clasp.json
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Logs
+*.log
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Backups
+backups/
+
+credentials/
+sync_config.json

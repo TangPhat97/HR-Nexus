@@ -1,0 +1,21 @@
+# Loại bỏ các file rác và file UI khi build cloud
+.git
+.brain
+.idea
+.vscode
+__pycache__
+*.pyc
+*.zip
+*.bak
+*.tmp
+node_modules/
+
+# Không copy credentials và config local, chúng ta sẽ dùng Environment Variables
+credentials/
+sync_config.json
+LD REPORT V3 2026 demo_golive/
+
+# Bỏ qua Dashboard Desktop
+local_excel_app.py
+Chay_Bao_Cao_Local.cmd
+Dong_Bo_Google_Sheets.cmd

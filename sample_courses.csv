@@ -1,0 +1,56 @@
+Tên Khóa Học,Loại Khóa Học,Nền Tảng,Thời Lượng (Giờ),Chi Phí/Người,Mô Tả
+Python Advanced,Kỹ Thuật,Trực Tuyến,16,500,Khóa học Python nâng cao
+JavaScript Fundamentals,Kỹ Thuật,Trực Tuyến,12,400,Nền tảng JavaScript cơ bản
+React Development,Kỹ Thuật,Trực Tuyến,20,600,Xây dựng ứng dụng React
+Node.js Backend,Kỹ Thuật,Trực Tuyến,18,550,Phát triển backend Node.js
+SQL Database Design,Kỹ Thuật,Kết Hợp,10,350,Thiết kế cơ sở dữ liệu SQL
+Docker & Kubernetes,Kỹ Thuật,Trực Tuyến,14,500,Container orchestration
+AWS Cloud Practitioner,Kỹ Thuật,Trực Tuyến,16,450,AWS cloud fundamentals
+Git & Version Control,Kỹ Thuật,Trực Tuyến,6,200,Quản lý phiên bản code
+API Design & Development,Kỹ Thuật,Kết Hợp,12,400,Thiết kế RESTful API
+Machine Learning Basics,Kỹ Thuật,Trực Tuyến,24,800,Cơ bản về ML và AI
+Cybersecurity Fundamentals,Kỹ Thuật,Trực Tuyến,10,350,An ninh mạng cơ bản
+Mobile App Development,Kỹ Thuật,Kết Hợp,20,650,Phát triển ứng dụng di động
+Data Analytics with Excel,Kỹ Thuật,Trực Tiếp,8,300,Phân tích dữ liệu Excel
+Power BI Reporting,Kỹ Thuật,Kết Hợp,12,400,Báo cáo với Power BI
+Agile & Scrum,Kỹ Thuật,Trực Tuyến,8,300,Phương pháp Agile/Scrum
+Leadership Essentials,Lãnh Đạo,Trực Tiếp,8,300,Kỹ năng lãnh đạo cơ bản
+Effective Communication,Kỹ Năng Mềm,Kết Hợp,6,250,Giao tiếp hiệu quả
+Time Management,Kỹ Năng Mềm,Trực Tuyến,4,150,Quản lý thời gian
+Presentation Skills,Kỹ Năng Mềm,Trực Tiếp,6,250,Kỹ năng thuyết trình
+Conflict Resolution,Kỹ Năng Mềm,Kết Hợp,8,300,Giải quyết xung đột
+Emotional Intelligence,Kỹ Năng Mềm,Trực Tuyến,6,200,Trí tuệ cảm xúc
+Teamwork & Collaboration,Kỹ Năng Mềm,Trực Tiếp,6,250,Làm việc nhóm
+Critical Thinking,Kỹ Năng Mềm,Trực Tuyến,8,280,Tư duy phản biện
+Problem Solving,Kỹ Năng Mềm,Kết Hợp,8,300,Giải quyết vấn đề
+Negotiation Skills,Kỹ Năng Mềm,Trực Tiếp,8,350,Kỹ năng đàm phán
+Stress Management,Kỹ Năng Mềm,Trực Tuyến,4,150,Quản lý căng thẳng
+Customer Service Excellence,Kỹ Năng Mềm,Kết Hợp,8,300,Dịch vụ khách hàng
+Strategic Planning,Lãnh Đạo,Trực Tiếp,12,500,Lập kế hoạch chiến lược
+Project Management (PMP),Lãnh Đạo,Kết Hợp,40,1500,Quản lý dự án PMP
+Change Management,Lãnh Đạo,Trực Tiếp,10,400,Quản lý thay đổi
+Performance Management,Lãnh Đạo,Kết Hợp,8,350,Quản lý hiệu suất
+Coaching & Mentoring,Lãnh Đạo,Trực Tiếp,8,350,Huấn luyện & cố vấn
+Budget & Finance for Managers,Lãnh Đạo,Kết Hợp,12,450,Ngân sách cho quản lý
+Risk Management,Lãnh Đạo,Trực Tuyến,10,380,Quản lý rủi ro
+Decision Making,Lãnh Đạo,Trực Tiếp,6,280,Ra quyết định hiệu quả
+Talent Development,Lãnh Đạo,Kết Hợp,8,350,Phát triển nhân tài
+Executive Leadership,Lãnh Đạo,Trực Tiếp,16,800,Lãnh đạo cấp cao
+Workplace Safety,Tuân Thủ,Trực Tiếp,4,150,An toàn lao động
+Data Privacy (GDPR),Tuân Thủ,Trực Tuyến,6,250,Bảo mật dữ liệu GDPR
+Anti-Harassment Training,Tuân Thủ,Trực Tuyến,2,100,Phòng chống quấy rối
+Ethics & Compliance,Tuân Thủ,Kết Hợp,4,180,Đạo đức và tuân thủ
+Information Security,Tuân Thủ,Trực Tuyến,6,220,Bảo mật thông tin
+Fire Safety,Tuân Thủ,Trực Tiếp,2,80,An toàn cháy nổ
+First Aid & CPR,Tuân Thủ,Trực Tiếp,8,200,Sơ cứu cấp cứu
+Environmental Compliance,Tuân Thủ,Kết Hợp,4,150,Tuân thủ môi trường
+Sales Mastery,Kỹ Năng Mềm,Kết Hợp,12,400,Kỹ năng bán hàng chuyên nghiệp
+Excel Power User,Kỹ Thuật,Trực Tiếp,8,250,Excel nâng cao cho dân văn phòng
+Digital Marketing,Kỹ Thuật,Trực Tuyến,16,500,Marketing số
+HR Management,Lãnh Đạo,Kết Hợp,12,450,Quản lý nhân sự
+Financial Analysis,Kỹ Thuật,Trực Tuyến,14,480,Phân tích tài chính
+Supply Chain Management,Lãnh Đạo,Kết Hợp,16,550,Quản lý chuỗi cung ứng
+Quality Management (ISO),Tuân Thủ,Trực Tiếp,10,400,Quản lý chất lượng ISO
+Legal Basics for Business,Tuân Thủ,Trực Tuyến,8,300,Pháp lý cơ bản
+Product Management,Lãnh Đạo,Kết Hợp,14,500,Quản lý sản phẩm
+Business Writing,Kỹ Năng Mềm,Trực Tuyến,6,200,Viết văn bản kinh doanh

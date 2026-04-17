@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>☁️ HR-NEXUS Cloud Operations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --surface-hover: #273548;
+      --border: #334155;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.15);
+      --green: #4ade80;
+      --green-bg: rgba(74, 222, 128, 0.1);
+      --orange: #fb923c;
+      --orange-bg: rgba(251, 146, 60, 0.1);
+      --red: #f87171;
+      --red-bg: rgba(248, 113, 113, 0.1);
+      --purple: #a78bfa;
+      --purple-bg: rgba(167, 139, 250, 0.1);
+      --yellow: #facc15;
+      --radius: 12px;
+      --code-bg: #0c1222;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 2.5rem 2rem;
+      background: linear-gradient(135deg, #1e3a5f 0%, #1e293b 50%, #2d1b4e 100%);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 50%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 70% 50%, rgba(167, 139, 250, 0.08) 0%, transparent 50%);
+      animation: shimmer 8s ease-in-out infinite alternate;
+    }
+    @keyframes shimmer {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-5%, 5%); }
+    }
+    .header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      position: relative;
+      background: linear-gradient(135deg, var(--accent), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+    .header p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      position: relative;
+    }
+    .header .badge {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.35rem 1rem;
+      background: var(--accent-glow);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 50px;
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 600;
+      position: relative;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 2rem;
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+    .section:hover { border-color: rgba(56, 189, 248, 0.3); }
+
+    .section-header {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      cursor: pointer;
+      user-select: none;
+    }
+    .section-header:hover { background: var(--surface-hover); }
+    .section-icon { font-size: 1.5rem; }
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    .section-subtitle {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-left: auto;
+      font-weight: 500;
+    }
+    .section-body { padding: 1.5rem; }
+
+    /* Code blocks */
+    .cmd-block {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin: 1rem 0;
+      overflow: hidden;
+    }
+    .cmd-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      background: rgba(56, 189, 248, 0.08);
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .cmd-label .step-num {
+      background: var(--accent);
+      color: var(--bg);
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+    .cmd-code {
+      padding: 1rem 1.25rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      line-height: 1.8;
+      color: var(--green);
+      overflow-x: auto;
+      position: relative;
+    }
+    .cmd-code .comment {
+      color: var(--text-muted);
+      font-style: italic;
+    }
+    .cmd-copy {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.2s;
+    }
+    .cmd-copy:hover {
+      background: var(--accent);
+      color: var(--bg);
+      border-color: var(--accent);
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+    th {
+      text-align: left;
+      padding: 0.75rem 1rem;
+      background: rgba(56, 189, 248, 0.08);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--border);
+    }
+    td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(56, 189, 248, 0.03); }
+
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--code-bg);
+      padding: 0.15rem 0.5rem;
+      border-radius: 5px;
+      font-size: 0.82rem;
+      color: var(--green);
+      border: 1px solid var(--border);
+    }
+
+    /* Alert boxes */
+    .alert {
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      margin: 1rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+    }
+    .alert-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .alert-warning {
+      background: var(--orange-bg);
+      border: 1px solid rgba(251, 146, 60, 0.25);
+      color: var(--orange);
+    }
+    .alert-info {
+      background: var(--accent-glow);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: var(--accent);
+    }
+    .alert-success {
+      background: var(--green-bg);
+      border: 1px solid rgba(74, 222, 128, 0.25);
+      color: var(--green);
+    }
+
+    /* Quick action cards */
+    .quick-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .action-card {
+      padding: 1.25rem;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: all 0.3s;
+    }
+    .action-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+    .action-card h4 {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .action-card p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+    .action-card code {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.78rem;
+      word-break: break-all;
+    }
+
+    /* Steps list */
+    .steps { list-style: none; counter-reset: step; }
+    .steps li {
+      position: relative;
+      padding: 0.75rem 0 0.75rem 3rem;
+      border-left: 2px solid var(--border);
+      margin-left: 1rem;
+    }
+    .steps li:last-child { border-left-color: transparent; }
+    .steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: -13px;
+      top: 0.7rem;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--bg);
+      font-weight: 800;
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 1rem; }
+      .quick-actions { grid-template-columns: 1fr; }
+      .header h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>☁️ HR-NEXUS Cloud Operations</h1>
+    <p>Hướng dẫn vận hành hệ thống báo cáo trên Google Cloud</p>
+    <span class="badge">📂 Thư mục: O:\clean-architecture-canonical\LD REPORT V2\LD REPORT V2</span>
+  </div>
+
+  <!-- SECTION 1: QUY TRÌNH CẬP NHẬT -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🔄</span>
+      <span class="section-title">Cập nhật code lên Cloud</span>
+      <span class="section-subtitle">Khi sửa code Python xong</span>
+    </div>
+    <div class="section-body">
+      <div class="alert alert-info">
+        <span class="alert-icon">💡</span>
+        <span>Mỗi lần sửa file <code>.py</code> trong project, chạy 3 bước này theo thứ tự để đưa code mới lên mây.</span>
+      </div>
+
+      <div class="cmd-block">
+        <div class="cmd-label">
+          <span class="step-num">1</span> Build image mới (~1 phút)
+        </div>
+        <div class="cmd-code">
+          <button class="cmd-copy" onclick="copyCmd(this)">📋 Copy</button>
+          gcloud builds submit --tag asia-southeast1-docker.pkg.dev/[YOUR_PROJECT_ID]/ld-reports/ld-report-engine
+        </div>
+      </div>
+
+      <div class="cmd-block">
+        <div class="cmd-label">
+          <span class="step-num">2</span> Cập nhật Cloud Job dùng image mới
+        </div>
+        <div class="cmd-code">
+          <button class="cmd-copy" onclick="copyCmd(this)">📋 Copy</button>
+          gcloud run jobs update ld-report-job --image=asia-southeast1-docker.pkg.dev/[YOUR_PROJECT_ID]/ld-reports/ld-report-engine:latest --region=asia-southeast1
+        </div>
+      </div>
+
+      <div class="cmd-block">
+        <div class="cmd-label">
+          <span class="step-num">3</span> Chạy thử (hoặc bấm nút trên Google Sheet)
+        </div>
+        <div class="cmd-code">
+          <button class="cmd-copy" onclick="copyCmd(this)">📋 Copy</button>
+          gcloud run jobs execute ld-report-job --region=asia-southeast1 --wait
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: CHẠY BÁO CÁO -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🚀</span>
+      <span class="section-title">Chạy báo cáo</span>
+      <span class="section-subtitle">2 cách</span>
+    </div>
+    <div class="section-body">
+      <div class="quick-actions">
+        <div class="action-card">
+          <h4>📊 Từ Google Sheet</h4>
+          <p>Mở Google Sheet → Menu trên cùng</p>
+          <code>☁️ L&D Cloud Engine → 🚀 Chạy báo cáo Cloud</code>
+        </div>
+        <div class="action-card">
+          <h4>💻 Từ Terminal</h4>
+          <p>Mở PowerShell, chạy lệnh</p>
+          <code>gcloud run jobs execute ld-report-job --region=asia-southeast1 --wait</code>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: DEBUG -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🔍</span>
+      <span class="section-title">Kiểm tra & Debug</span>
+      <span class="section-subtitle">Khi có lỗi</span>
+    </div>
+    <div class="section-body">
+
+      <div class="cmd-block">
+        <div class="cmd-label">Xem trạng thái Job</div>
+        <div class="cmd-code">
+          <button class="cmd-copy" onclick="copyCmd(this)">📋 Copy</button>
+          gcloud run jobs describe ld-report-job --region=asia-southeast1
+        </div>
+      </div>
+
+      <div class="cmd-block">
+        <div class="cmd-label">Xem log lần chạy gần nhất</div>
+        <div class="cmd-code">
+          <button class="cmd-copy" onclick="copyCmd(this)">📋 Copy</button>
+          gcloud logging read "resource.type=cloud_run_job AND resource.labels.job_name=ld-report-job" --limit=30 --format="value(textPayload)" --project=[YOUR_PROJECT_ID]
+        </div>
+      </div>
+
+      <div class="cmd-block">
+        <div class="cmd-label">Xem chi tiết 1 execution (thay ID ở cuối)</div>
+        <div class="cmd-code">
+          <button class="cmd-copy" onclick="copyCmd(this)">📋 Copy</button>
+          gcloud run jobs executions describe ld-report-job-XXXXX --region=asia-southeast1
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SECTION 4: CẤU HÌNH -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">⚙️</span>
+      <span class="section-title">Thay đổi cấu hình</span>
+      <span class="section-subtitle">Đổi Sheet, đổi năm</span>
+    </div>
+    <div class="section-body">
+
+      <div class="cmd-block">
+        <div class="cmd-label">Đổi Google Sheet ID</div>
+        <div class="cmd-code">
+          <button class="cmd-copy" onclick="copyCmd(this)">📋 Copy</button>
+          <span class="comment"># Thay &lt;SHEET_ID_MỚI&gt; bằng ID thật</span><br>
+          gcloud run jobs update ld-report-job --region=asia-southeast1 --set-env-vars="GS_SPREADSHEET_ID=<span style="color:#facc15">&lt;SHEET_ID_MỚI&gt;</span>,FISCAL_YEAR=2026"
+        </div>
+      </div>
+
+      <div class="cmd-block">
+        <div class="cmd-label">Đổi năm tài chính sang 2027</div>
+        <div class="cmd-code">
+          <button class="cmd-copy" onclick="copyCmd(this)">📋 Copy</button>
+          gcloud run jobs update ld-report-job --region=asia-southeast1 --set-env-vars="GS_SPREADSHEET_ID=[YOUR_SPREADSHEET_ID],FISCAL_YEAR=<span style="color:#facc15">2027</span>"
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SECTION 5: THÔNG TIN HỆ THỐNG -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">📋</span>
+      <span class="section-title">Thông tin hệ thống</span>
+      <span class="section-subtitle">Tham khảo</span>
+    </div>
+    <div class="section-body">
+      <table>
+        <thead>
+          <tr><th>Key</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Project ID</td><td><code>[YOUR_PROJECT_ID]</code></td></tr>
+          <tr><td>Region</td><td><code>asia-southeast1</code></td></tr>
+          <tr><td>Job Name</td><td><code>ld-report-job</code></td></tr>
+          <tr><td>Image</td><td><code>asia-southeast1-docker.pkg.dev/[YOUR_PROJECT_ID]/ld-reports/ld-report-engine</code></td></tr>
+          <tr><td>Test Sheet ID</td><td><code>[YOUR_SPREADSHEET_ID]</code></td></tr>
+          <tr><td>Service Account</td><td><code>hr-nexus-sync@[YOUR_PROJECT_ID].iam.gserviceaccount.com</code></td></tr>
+          <tr><td>Secret</td><td><code>gs-service-account:latest</code></td></tr>
+          <tr><td>Timezone</td><td><code style="color:var(--green)">Asia/Ho_Chi_Minh (UTC+7)</code></td></tr>
+          <tr><td>Features</td><td><code style="color:var(--accent)">GID Logging</code>, <code style="color:var(--accent)">Auto-Timezone Fix</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 6: ĐỔI SHEET -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">⚠️</span>
+      <span class="section-title">Quy trình đổi sang Sheet khác (hoặc Live Sheet)</span>
+      <span class="section-subtitle">Khi cần đổi file dữ liệu</span>
+    </div>
+    <div class="section-body">
+      <div class="alert alert-warning">
+        <span class="alert-icon">⚠️</span>
+        <span>Làm theo 3 bước dưới đây khi chuyển từ Test → Production hoặc đổi sang file mới.</span>
+      </div>
+
+      <div class="alert alert-info">
+        <span class="alert-icon">💡</span>
+        <div>
+          <strong>Mẹo lấy ID Sheet nhanh:</strong> ID là đoạn mã nằm giữa <code>/d/</code> và <code>/edit</code> trong URL.<br>
+          <small>Ví dụ: docs.google.com/spreadsheets/d/<span style="color:var(--yellow)">1lJuYu...</span>/edit</small>
+        </div>
+      </div>
+
+      <ol class="steps">
+        <li>
+          <strong>Share Live Sheet</strong> cho Service Account (quyền Editor):<br>
+          <code>hr-nexus-sync@[YOUR_PROJECT_ID].iam.gserviceaccount.com</code>
+        </li>
+        <li>
+          <strong>Cập nhật Sheet ID</strong> cho Cloud Job:<br>
+          <code>gcloud run jobs update ld-report-job --region=asia-southeast1 --set-env-vars="GS_SPREADSHEET_ID=&lt;LIVE_SHEET_ID&gt;,FISCAL_YEAR=2026"</code>
+        </li>
+        <li>
+          <strong>Cài code GAS</strong> vào Live Sheet:<br>
+          Copy code từ file <code>gas_cloud_trigger.js</code> → paste vào Apps Script của Live Sheet.
+          Nhớ cập nhật <code>appsscript.json</code> thêm OAuth scopes.
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    HR-NEXUS Cloud Engine v1.0 · Powered by Google Cloud Run Jobs · Python 3.11<br>
+    Cập nhật: Tháng 4/2026
+  </div>
+
+  <script>
+    function copyCmd(btn) {
+      const codeEl = btn.parentElement;
+      // Get text content, excluding the button and comments
+      let text = codeEl.innerText.replace('📋 Copy', '').trim();
+      // Remove comment lines
+      text = text.split('\n').filter(line => !line.trim().startsWith('#')).join('\n').trim();
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = '✅ Copied!';
+        btn.style.background = '#4ade80';
+        btn.style.color = '#0f172a';
+        btn.style.borderColor = '#4ade80';
+        setTimeout(() => {
+          btn.textContent = '📋 Copy';
+          btn.style.background = '';
+          btn.style.color = '';
+          btn.style.borderColor = '';
+        }, 2000);
+      });
+    }
+  </script>
+
+</body>
+</html>

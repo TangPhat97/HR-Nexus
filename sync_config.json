@@ -1,0 +1,7 @@
+{
+  "spreadsheet_id": "1GqaU0jMLhH6f4d7VR1PSSUUdHLFCTYVsjeIkLdzDI84",
+  "credentials_path": "credentials/hr-nexus-493406-e5d5451ee4c3.json",
+  "fiscal_year": "2026",
+  "backup_before_push": true,
+  "gcp_project_id": "hr-nexus-493406"
+}

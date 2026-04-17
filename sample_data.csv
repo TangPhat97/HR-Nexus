@@ -1,0 +1,16 @@
+Emp ID,Full Name,Department,Job Title,Course Name,Course Category,Training Date,Platform,Duration (Hours),Cost Per Pax,Attendance Status,Pre-Assessment,Post-Assessment,Satisfaction (1-5),Relevance (1-5),NPS (0-10),Skill Before,Skill After,Applied On Job,Manager Feedback,Performance Gain %,Retained 90 Days
+EMP001,Nguyen Van A,IT,Software Engineer,Python Advanced,Technical,2024-01-15,Online,16,500,Attended,65,88,5,5,9,Medium,High,Yes,Excellent improvement in code quality,25,Yes
+EMP002,Tran Thi B,HR,HR Manager,Leadership Essentials,Leadership,2024-01-20,Offline,8,300,Attended,70,85,4,5,8,Medium,High,Yes,Better team management,20,Yes
+EMP003,Le Van C,Sales,Sales Executive,Sales Mastery,Soft Skills,2024-01-25,Hybrid,12,400,Attended,60,82,5,4,9,Low,High,Partial,Good progress but needs more practice,15,Yes
+EMP004,Pham Thi D,Operations,Operations Manager,Process Optimization,Technical,2024-02-01,Online,10,350,Attended,75,90,5,5,10,High,High,Yes,Outstanding results,30,Yes
+EMP005,Hoang Van E,Finance,Financial Analyst,Excel Power User,Technical,2024-02-05,Online,8,250,Attended,55,78,4,4,7,Low,Medium,Yes,Noticeable improvement,18,Yes
+EMP006,Nguyen Thi F,Marketing,Marketing Specialist,Digital Marketing 101,Soft Skills,2024-02-10,Offline,16,600,Attended,68,85,5,5,9,Medium,High,Yes,Great campaign results,22,Yes
+EMP007,Tran Van G,IT,DevOps Engineer,Docker & Kubernetes,Technical,2024-02-15,Online,20,800,Attended,72,92,5,5,10,High,High,Yes,Excellent deployment improvements,28,Yes
+EMP008,Le Thi H,HR,Recruiter,Interviewing Skills,Soft Skills,2024-02-20,Hybrid,6,200,Attended,65,80,4,4,8,Medium,High,Partial,Good but needs more confidence,12,Yes
+EMP009,Pham Van I,Sales,Sales Manager,Advanced Negotiation,Leadership,2024-02-25,Offline,12,500,Attended,78,88,5,5,9,High,High,Yes,Closed 3 major deals after training,35,Yes
+EMP010,Hoang Thi J,Operations,Quality Analyst,Six Sigma Green Belt,Compliance,2024-03-01,Online,40,1500,Attended,70,95,5,5,10,Medium,High,Yes,Reduced defects by 40%,40,Yes
+EMP011,Nguyen Van K,IT,QA Engineer,Test Automation,Technical,2024-03-05,Online,16,450,Absent,,,,,,,,,,,
+EMP012,Tran Thi L,Finance,Accountant,Financial Modeling,Technical,2024-03-10,Offline,12,400,Attended,62,75,3,4,6,Low,Medium,No,Limited application in current role,8,Yes
+EMP013,Le Van M,Marketing,Content Writer,Copywriting Mastery,Soft Skills,2024-03-15,Online,10,300,Attended,68,86,5,5,9,Medium,High,Yes,Content engagement up 50%,30,Yes
+EMP014,Pham Thi N,HR,Training Coordinator,Instructional Design,Soft Skills,2024-03-20,Hybrid,20,700,Attended,75,92,5,5,10,High,High,Yes,Redesigned 5 training programs,25,Yes
+EMP015,Hoang Van O,Sales,Business Development,Strategic Selling,Leadership,2024-03-25,Offline,8,350,Attended,70,83,4,5,8,Medium,High,Partial,Good concepts but slow implementation,15,Yes
